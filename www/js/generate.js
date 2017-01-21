@@ -27,7 +27,7 @@ function generateMenuItem(markup) {
         generateProgramPage(markup)
         goToTop()
     }
-	a.style.backgroundImage = "url(../img/" + markup.image + ")"
+	a.style.backgroundImage = "url(./img/" + markup.image + ")"
 	
 
 	var title = createH1(markup.title)
@@ -65,7 +65,7 @@ function generateProgramPageHeader(title, image) {
 
 	var title = createH1(title)
 	title.classList.add("headerLogo")
-	title.style.backgroundImage = "url(../img/" + image + ")"
+	title.style.backgroundImage = "url(./img/" + image + ")"
 	var goToTop = document.createElement("a")
 	goToTop.id = "toTop"
 	goToTop.onclick = goToTop
