@@ -101,33 +101,29 @@ a.close {
 		display: block;
 		text-indent: -9999px;
 		float: right;
-		min-height: 100px;
-		width: 100px;
+		min-height: 64px;
+		width: 64px;
+		margin: 18px;
+		background-size: contain;
+		background-position: center;
+		background-repeat: no-repeat
 	}
 
 	#header #norea {
-		background: url(../img/noreaglobe.png) no-repeat center center;
-		background-size: 64px 64px;
-	}
-
-	#header #hc {
-		background: url(../img/hc.png) no-repeat center center;
-		background-size: 72px 72px;
+		background-image: url(../img/noreaglobe.png);
 	}
 
 	#header #omg {
 		background: url(../img/omg.png) no-repeat center center;
-		background-size: 72px 72px;
+
 	}
 
 	#header #vgb {
 		background: url(../img/vgb.png) no-repeat left center;
-		background-size: 90px 72px;
 	}
 
 	#header #history {
 		background: url(../img/history.png) no-repeat center center;
-		background-size: 72px 72px;
 	}
 
 	#header #toTop {
@@ -164,7 +160,7 @@ a.close {
 		border-bottom: 1px solid #eaeaea;
 	}
 
-	#content #textbox {
+	#content .textbox {
 		display: block;
 		width: 100%;
 		color: #555;
@@ -247,27 +243,31 @@ a.close {
 		padding-right: 9px;
 	}
 
-	#content #center {
+	#content .center {
 		border-bottom: 1px solid #eaeaea;
 		width: 100%;
 	}
 
-	#content #omg, #content #hc, #content #vgb, #content #history, #content #sms {
+	#content .center a {
 		display: block;
 		min-height: 100px;
 		padding-left: 128px;
 		width: 192px;
 		margin: 0 auto;
+		background-size: 72px 72px;
+		background-position: 16px center;
+		background-color: #fafafa;
+		background-repeat: no-repeat;
 	}
 
-	#content #omg h1, #content #hc h1, #content #vgb h1, #content #history h1, #content #sms h1 {
+	#content .center h1 {
 		padding-top: 26px;
 		line-height: 24px;
 		font-size: 18px;
 		font-weight: normal;
 	}
 
-	#content #omg p, #content #hc p, #content #vgb p, #content #history p, #content #sms p {
+	#content .center p {
 		margin: 0;
 		padding: 0;
 		font-size: 13px;
@@ -277,27 +277,22 @@ a.close {
 
 	#content #omg {
 		background: #fafafa url(../img/omg.png) no-repeat 28px center;
-		background-size: 72px 72px;
 	}
 
 	#content #hc {
 		background: #fafafa url(../img/hc.png) no-repeat 28px center;
-		background-size: 72px 72px;
 	}
 
 	#content #vgb {
 		background: #fafafa url(../img/vgb.png) no-repeat 16px center;
-		background-size: 90px 72px;
 	}
 
 	#content #history {
 		background: #fafafa url(../img/history.png) no-repeat 28px center;
-		background-size: 72px 72px;
 	}
 
 	#content #sms {
 		background: #fafafa url(../img/sms.png) no-repeat 28px center;
-		background-size: 72px 72px;
 	}
 
 	#content a h1 {

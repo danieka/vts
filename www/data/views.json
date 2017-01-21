@@ -1,0 +1,18 @@
+[
+    {
+        "title": "Välkommen till Sverige",
+        "shortDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "longDescription": "<b>Lorem</b> ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sapien eros, vehicula et sodales quis, pulvinar vitae risus. Ut et condimentum risus. Sed et ultrices lectus. Ut venenatis neque ex, sed pharetra urna mattis sed. Vivamus eros felis, rhoncus vitae laoreet et, porta sit amet ipsum. Duis malesuada imperdiet urna, fringilla efficitur felis varius in. Donec vitae pellentesque nisl, vestibulum ultrices enim.",
+        "image": "vts.png",
+        "shortName": "vts_swe",
+        "language": "swe"
+    },
+    {
+        "title": "أهلاً وسهلاً بكم في السويد",
+        "shortDescription": "الففحة ما سيلهي القارئ عن التركيز على الشكل الخ",
+        "longDescription": "هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها.",
+        "image": "vts.png",
+        "shortName": "vts_ara",
+        "language": "ara"
+    }
+]
