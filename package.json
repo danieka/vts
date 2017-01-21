@@ -1,0 +1,23 @@
+{
+  "name": "valkommentillsverige",
+  "version": "1.0.0",
+  "description": "##Apache Cordova This is an Apache Cordova project, so make sure [Apache Cordova](https://cordova.apache.org/) is installed before you start.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danieka/ValkommenTillSverige.git"
+  },
+  "author": "Daniel Karlsson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/danieka/ValkommenTillSverige/issues"
+  },
+  "homepage": "https://github.com/danieka/ValkommenTillSverige#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "live-server": "^1.2.0"
+  }
+}
