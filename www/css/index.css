@@ -24,7 +24,7 @@ body {
 
 /* Preloading images */
 body:after {
-	content: url(../img/back.png) url(../img/bible.png) url(../img/close.png);
+	content: url(../img/back.png) url(../img/close.png);
 	display: none;
 }
 
@@ -69,18 +69,7 @@ a.close {
 		height: 100px;
 		text-indent: -9999px;
 	}
-
-	#header #bibleBtn {
-		position: relative;
-		float: right;
-		background: url(../img/bible.png) no-repeat center center;
-		background-size: 64px 64px;
-		display: block;
-		width: 100px;
-		height: 100px;
-		text-indent: -9999px;
-	}
-
+	
 	#header h1 {
 		float: left;
 		width: auto;
