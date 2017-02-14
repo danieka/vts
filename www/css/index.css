@@ -109,17 +109,8 @@ a.close {
 		background-repeat: no-repeat
 	}
 
-	#header #omg {
-		background: url(../img/omg.png) no-repeat center center;
-
-	}
-
-	#header #vgb {
-		background: url(../img/vgb.png) no-repeat left center;
-	}
-
 	#header #history {
-		background: url(../img/history.png) no-repeat center center;
+		background-image: url(../img/history.png);
 	}
 
 	#header #toTop {

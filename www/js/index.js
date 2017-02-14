@@ -279,7 +279,7 @@ function selectLanguage(lang) {
 
 function showLanguageSelectScreen() {
 	const languageSelector = document.getElementById("language-selector")
-	languageSelector.classList.add("show")
+	setTimeout(() => languageSelector.classList.add("show"))
 	languageSelector.style.display = 'flex'
 }
 
