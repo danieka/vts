@@ -108,8 +108,7 @@ function loadHistory() {
 	header.style["border-bottom"] = "1px solid #ccc";
 
 	var newContent = `<div id="textbox"><p>${translations["T_HISTORY_LONG"]}</p></div>`
-	var history = getHistory();
-	console.error(history)
+	var history = getHistory()
 	if (history != "") {
 		newContent += `<a onclick="clearHistory();" id="back"><h2>${ translations["T_HISTORY_CLEAR"]}</h2></a>`;
 	}
