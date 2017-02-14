@@ -21,7 +21,7 @@ var isPage = "";         // variable that contains the name of the active page
 var headerHeight = 100;  // default height of the header (different on larger screens)
 var footerHeight = 64;   // default footer height (different on larger screens)
 
-var markup;
+var markup, translations;
 
 
 /*--------------------*/
@@ -32,6 +32,7 @@ if (document != undefined) {
 	main()
 }
 
+
 /*--------------------------------*/
 /* 3. functions for loading pages */
 /*--------------------------------*/
@@ -39,17 +40,18 @@ if (document != undefined) {
 /* loads main menu */
 function loadMenu() {
 	isPage = "main";
-	var mainMenu = makeHideBox("<p><b>Norea Sverige</b> är en fristående missions&shy;organisation som vill sprida budskapet om Jesus med hjälp av media. Du kan lyssna till våra programserier via radio, internet eller direkt i din mobil genom vår app. Programmen går också att beställa på CD-skivor eller USB-minne.</p>", "loadInfo()")
 
 	var content = document.getElementById("content")
-	content.innerHTML = mainMenu;
+	content.innerHTML = "";
 	for (var view of markup) {
 		content.appendChild(generateMenuItem(view))
 	}
+	content.appendChild(generateMenyItem2(translations['T_HISTORY'], translations['T_HISTORY_SHORT'], 'history', loadHistory))
+	content.appendChild(generateMenyItem2(translations['T_CONTACT'], translations['T_CONTACT_SHORT'], 'contact', loadContact))
+	
 	var mainHeader = '<a onclick="loadInfo();" id="home">Norea Sverige</a>';
 	var header = document.getElementById("header");
 	header.innerHTML = mainHeader;
-	header.style["background"] = "#82982e";
 	header.style["border-bottom"] = "1px solid #774";
 }
 
@@ -87,22 +89,9 @@ function loadInfo() {
 	document.getElementById("content").innerHTML = info;
 }
 
-
-/* loads programdata.json into global vaiable program */
-
-
-function generateProgramListing(shortName) {
-	json = loadJSON("./data/programs/" + shortName + ".json", function (content) {
-		program = JSON.parse(content);
-	});
-	var programs = []
-	for (var programEntry of json) {
-		console.log(generateAudioLink(programEntry))
-		programs.push(generateAudioLink(programEntry))
-	}
-	var container = document.createElement("div")
-	renderTo.apply(this, [container].concat(programs))
-	return container
+function loadContact() {
+	isPage = 'contact';
+	goToTop()
 }
 
 /* loads track history */
@@ -110,26 +99,28 @@ function loadHistory() {
 	isPage = "history";
 	goToTop();
 
-	var newHeader = '<a onclick="loadMenu();" id="back">Tillbaka till menyn</a>' +
-		'<h1 id="history" class="headerLogo">Historik</h1>' +
-		'<a onclick="goToTop();" id="toTop">Tillbaka till toppen</a>';
+	var newHeader = `<a onclick="loadMenu();" id="back">Tillbaka till menyn</a>
+		<h1 id="history" class="headerLogo">Historik</h1>
+		<a onclick="goToTop();" id="toTop"></a>`
 	var header = document.getElementById("header");
 	header.innerHTML = newHeader;
 	header.style["background"] = "#eaeaea";
 	header.style["border-bottom"] = "1px solid #ccc";
 
-	var newContent = '<div id="textbox"><p>Här kan du se dina 100 senast spelade program från alla programserier.</p></div>';
+	var newContent = `<div id="textbox"><p>${translations["T_HISTORY_LONG"]}</p></div>`
 	var history = getHistory();
+	console.error(history)
 	if (history != "") {
-		newContent += '<a onclick="clearHistory();" id="back"><h2>Rensa historik</h2></a>';
-		for (var i = history.length - 1; i >= 0; i--) {
-			newContent += makeLink(history[i]);
-		}
+		newContent += `<a onclick="clearHistory();" id="back"><h2>${ translations["T_HISTORY_CLEAR"]}</h2></a>`;
 	}
 	else {
-		newContent += '<h2>Historiken är tom</h2>';
+		newContent += `<h2>${ translations["T_HISTORY_EMPTY"]}</h2>`;
 	}
-	document.getElementById("content").innerHTML = newContent;
+	const content = document.getElementById("content")
+	content.innerHTML = newContent;
+	for (var i = history.length - 1; i >= 0; i--) {
+		content.appendChild(generateAudioLink(history[i]))
+	}
 }
 
 /*--------------------------------------------*/
@@ -139,6 +130,7 @@ function loadHistory() {
 // Load JSON text from server hosted file and return JSON parsed object
 function loadJSON(filePath) {
   // Load json file;
+  console.error(filePath)
   var json = loadTextFileAjaxSync(filePath, "application/json");
   // Parse json
   console.log(json)
@@ -274,9 +266,33 @@ function onEnded() {
 	isPlaying = false;
 }
 
+function selectLanguage(lang) {
+	const languageSelector = document.getElementById("language-selector")
+	languageSelector.classList.remove("show")
+	setTimeout(() => languageSelector.style.display = 'none', 600)
+	localStorage['language'] = lang
+	let json = loadJSON(`./data/views_${ lang }.json`)
+	markup = json["views"]
+	translations = json["translations"]
+	loadMenu()
+}
+
+function showLanguageSelectScreen() {
+	const languageSelector = document.getElementById("language-selector")
+	languageSelector.classList.add("show")
+	languageSelector.style.display = 'flex'
+}
+
 function main() {
-	markup = loadJSON("./data/views.json")
-	loadMenu(); // loads the main menu
+	lang = localStorage["language"]
+	if (lang) {
+		let json = loadJSON(`./data/views_${ lang }.json`)
+		markup = json["views"]
+		translations = json["translations"]
+		loadMenu()
+	} else {
+		showLanguageSelectScreen()
+	}
 
 	/* setting a timeout function to clear the way for a redrawing of DOM */
 	setTimeout(function () {

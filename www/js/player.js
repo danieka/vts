@@ -67,9 +67,10 @@ function showPlayButton() {
 
 /* shows the footer where the player is */
 function showFooter() {
-	document.getElementById("content").style["margin-bottom"] = footerHeight + "px"; // adds extra margin at the bottom
+	document.getElementById("content").style["margin-bottom"] = footerHeight - 50 + "px"; // adds extra margin at the bottom
 	document.getElementById("error").style["display"] = "none";                    // hides error message
 	document.getElementById("footer").style["display"] = "block";                  // shows footer
+	document.getElementById("language-footer").style.display = 'none';
 }
 
 /* closes the footer */
@@ -77,6 +78,7 @@ function closeFooter() {
 	document.getElementById("content").style["margin-bottom"] = "0px"; // removes extra margin at the bottom
 	document.getElementById("footer").style["display"] = "none";       // hides footer
 	document.getElementById("playerBox").innerHTML = '';               // removes audio tag from content
+	document.getElementById("language-footer").style.display = 'flex';
 }
 
 /* shows the error message */

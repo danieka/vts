@@ -14,6 +14,10 @@
 		</header>
 		<div id="content">
 		</div>
+		<footer id="language-footer">
+			<img onclick="showLanguageSelectScreen()" src="img/globe.png">
+			<p>© Norea Sverige</p>
+		</footer>
 		<footer id="footer">
 			<div id="playerBox"></div>
 			<div id="scrubber">
@@ -31,6 +35,11 @@
 			</div>
 			<a id="closeFooter" class="close" onclick="closeFooter();">Close Footer</a>
 		</footer>
+		<div id="language-selector">
+			<img src="img/vts_header.png">
+			<button onclick="selectLanguage('swe')">Svenska</button>
+			<button onclick="selectLanguage('ara')">Arabiska</button>
+		</div>
 		<div id="error"><p id="errorText"></p><a class="close" onclick="closeError();">Close Error</a></div>
 		<script src="js/player.js"></script>
 		<script src="js/generate.js"></script>

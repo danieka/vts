@@ -90,8 +90,8 @@ a.close {
 
 	#header #home {
 		display: block;
-		background: url(../img/norealogo-vit.png) no-repeat center center;
-		background-size: 219px 64px;
+		background: url(../img/vts_header.png) no-repeat center center;
+		background-size: 200px 80px;
 		width: 100%;
 		height: 100px;
 		text-indent: -9999px;
@@ -107,10 +107,6 @@ a.close {
 		background-size: contain;
 		background-position: center;
 		background-repeat: no-repeat
-	}
-
-	#header #norea {
-		background-image: url(../img/noreaglobe.png);
 	}
 
 	#header #omg {
@@ -148,6 +144,7 @@ a.close {
 	margin-top: 100px;
 	margin-bottom: 0;
 	overflow: hidden;
+	padding-bottom: 50px;
 }
 
 	#content #hidebox {
@@ -275,24 +272,12 @@ a.close {
 		color: #a5a5a5;
 	}
 
-	#content #omg {
-		background: #fafafa url(../img/omg.png) no-repeat 28px center;
-	}
-
-	#content #hc {
-		background: #fafafa url(../img/hc.png) no-repeat 28px center;
-	}
-
-	#content #vgb {
-		background: #fafafa url(../img/vgb.png) no-repeat 16px center;
-	}
-
 	#content #history {
-		background: #fafafa url(../img/history.png) no-repeat 28px center;
+		background-image: url(../img/history.png);
 	}
 
 	#content #sms {
-		background: #fafafa url(../img/sms.png) no-repeat 28px center;
+		background-image: url(../img/sms.png);
 	}
 
 	#content a h1 {
@@ -502,4 +487,63 @@ a.close {
 	background: #fff;
 	border: 1px solid #eaeaea;
 	margin: 0 4px 8px 4px;
+}
+
+#language-selector {
+	position: absolute;
+	top: 100vh;
+	left: 0;
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	z-index: 50;
+	background: #fafafa;
+	transition: 0.5s;
+}
+
+#language-selector.show {
+	transform: translateY(-100vh);
+}
+
+#language-selector img {
+	width: 90vw;
+	margin-bottom: 20vh;
+}
+
+#language-selector button {
+	background: rgb(229, 185, 43);
+	color: rgb(54, 91, 164);
+	width: 80vw;
+	font-size: 18px;
+	margin: 10px;
+	padding: 10px;
+	border: none;
+}
+
+#language-footer {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	border-top: 1px solid lightgray;
+	background: white;
+}
+
+#language-footer img {
+	height: 30px;
+	margin: 10px;
+}
+
+#language-footer p {
+	position: absolute;
+	right: 5px;
+	bottom: 5px;
+	font-size: 10px;
 }

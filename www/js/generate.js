@@ -7,6 +7,9 @@ function createTextNode(type, text) {
 createH1 = createTextNode.bind(null, "h1")
 createP = createTextNode.bind(null, "p")
 
+h1 = createH1
+p = createP
+
 function createElement(type, options) {
     var ret = document.createElement(arguments[0])
     for(var key in options) {
@@ -17,6 +20,20 @@ function createElement(type, options) {
 
 var a = createElement.bind(null, "a")
 var div = createElement.bind(null, "div")
+
+
+function generateMenyItem2(title, ingress, domid, load) {
+	var link = renderTo(a(),
+			h1(title),
+			p(ingress))
+	link.onclick = load
+	link.id = domid
+
+	var d = div()
+	d.classList.add('center')
+	return renderTo(d, link)
+}
+
 
 function generateMenuItem(markup) {
 	var div = document.createElement("div")
@@ -68,7 +85,7 @@ function generateProgramPageHeader(title, image) {
 	title.style.backgroundImage = "url(./img/" + image + ")"
 	var goToTop = document.createElement("a")
 	goToTop.id = "toTop"
-	goToTop.onclick = goToTop
+	goToTop.onclick = () => window.scrollTo(0, 0)
 	goToTop.innerText = "Tillbaka till toppen"
 
 	container.appendChild(back)
@@ -121,4 +138,19 @@ function generateProgramPage(markup) {
 	renderTo(document.getElementById("content"),
 		generateTextBox(markup.longDescription),
 		generateProgramListing(markup.shortName))
+}
+
+
+function generateProgramListing(shortName) {
+	json = loadJSON("./data/programs/" + shortName + ".json", function (content) {
+		program = JSON.parse(content);
+	});
+	var programs = []
+	for (var programEntry of json) {
+		console.log(generateAudioLink(programEntry))
+		programs.push(generateAudioLink(programEntry))
+	}
+	var container = document.createElement("div")
+	renderTo.apply(this, [container].concat(programs))
+	return container
 }

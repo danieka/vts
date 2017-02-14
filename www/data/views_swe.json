@@ -1,0 +1,22 @@
+{
+    "views": [
+        {
+            "title": "Välkommen till Sverige",
+            "shortDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            "longDescription": "<b>Lorem</b> ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sapien eros, vehicula et sodales quis, pulvinar vitae risus. Ut et condimentum risus. Sed et ultrices lectus. Ut venenatis neque ex, sed pharetra urna mattis sed. Vivamus eros felis, rhoncus vitae laoreet et, porta sit amet ipsum. Duis malesuada imperdiet urna, fringilla efficitur felis varius in. Donec vitae pellentesque nisl, vestibulum ultrices enim.",
+            "image": "vts.png",
+            "shortName": "vts_swe",
+            "language": "swe"
+        }
+    ],
+    "translations": {
+        "T_HISTORY": "Historik",
+        "T_HISTORY_SHORT": "Senaste spelade avsnitt",
+        "T_HISTORY_LONG": "Här kan du se dina 100 senast spelade program från alla programserier.",
+        "T_HISTORY_CLEAR": "Rensa historiken",
+        "T_HISTORY_EMPTY": "Historiken är tom",
+        "T_CONTACT": "Kontakta oss",
+        "T_CONTACT_SHORT": "Här kan du kontakta oss på Norea radio",
+        "T_CONTACT_LONG": "Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum."
+    }
+}
