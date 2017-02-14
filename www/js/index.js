@@ -285,6 +285,7 @@ function showLanguageSelectScreen() {
 function main() {
 	lang = localStorage["language"]
 	if (lang) {
+		document.getElementById("language-selector").style.display = 'none'
 		let json = loadJSON(`./data/views_${ lang }.json`)
 		markup = json["views"]
 		translations = json["translations"]
