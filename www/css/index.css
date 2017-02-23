@@ -46,6 +46,12 @@ a.close {
 	text-indent: -9999px;
 }
 
+p.ingress {
+	font-size: 12px;
+	color: #6b6a6a;
+	padding-top: 5px !important;
+}
+
 #header {
 	z-index: 2;
 	position: fixed;

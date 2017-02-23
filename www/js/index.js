@@ -43,6 +43,9 @@ function loadMenu() {
 
 	var content = document.getElementById("content")
 	content.innerHTML = "";
+	var pel = p(markup[0].description)
+	pel.classList.add("ingress")
+	content.appendChild(pel)
 	for (var view of markup) {
 		content.appendChild(generateMenuItem(view))
 	}

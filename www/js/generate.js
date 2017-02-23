@@ -48,11 +48,9 @@ function generateMenuItem(markup) {
 	
 
 	var title = createH1(markup.title)
-	var p = createP(markup.shortDescription)
 
 	div.appendChild(a)
 	a.appendChild(title)
-	a.appendChild(p)
 
 	return div
 }
