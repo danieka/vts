@@ -134,7 +134,6 @@ function generateProgramPage(markup) {
 	header.style["border-bottom"] = "1px solid #ccc";
 
 	renderTo(document.getElementById("content"),
-		generateTextBox(markup.longDescription),
 		generateProgramListing(markup.shortName))
 }
 
