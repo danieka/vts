@@ -2,8 +2,7 @@
     "views": [
         {
             "title": "Välkommen till Sverige",
-            "shortDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-            "longDescription": "<b>Lorem</b> ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sapien eros, vehicula et sodales quis, pulvinar vitae risus. Ut et condimentum risus. Sed et ultrices lectus. Ut venenatis neque ex, sed pharetra urna mattis sed. Vivamus eros felis, rhoncus vitae laoreet et, porta sit amet ipsum. Duis malesuada imperdiet urna, fringilla efficitur felis varius in. Donec vitae pellentesque nisl, vestibulum ultrices enim.",
+            "description": "Välkommen till Sverige är en programserie för dig som är ny i landet. Här kan du lyssna till handlar om vardagslivet här och nu. Du kommer också få höra välkända berättelser som ger hopp och framtidstro.",
             "image": "vts.png",
             "shortName": "vts_swe",
             "language": "swe"

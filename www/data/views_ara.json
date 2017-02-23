@@ -2,12 +2,20 @@
     "views": [
         {
             "title": "أهلاً وسهلاً بكم في السويد",
-            "shortDescription": "الففحة ما سيلهي القارئ عن التركيز على الشكل الخ",
-            "longDescription": "هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها.",
+            "shortDescription": "أهلاً وسهلاً بكم في السويد ، هذه سلسلة برامج لك كقادم جديد الى السويد. في البرنامج نناقش الأمور التي تؤثر على الحياة اليومية في بلدنا ، وأيضا يمكنك الأستماع إلى القصص المعروفة من تاريخنا التي تعطي الأمل والتوجيه للحياة سواءً الآن أو في المستقبل .",
             "image": "vts.png",
             "shortName": "vts_ara",
             "language": "ara"
         }
     ],
-    "translations": {}
+    "translations": {
+        "T_HISTORY": "سَجل",
+        "T_HISTORY_SHORT": "آخر الملفات المشغلة",
+        "T_HISTORY_LONG": "آخر مئة ملف تم الأستماع لهم",
+        "T_HISTORY_CLEAR": "مسح السجل",
+        "T_HISTORY_EMPTY": "السجل فارغ",
+        "T_CONTACT": "Kontakta oss",
+        "T_CONTACT_SHORT": "تواصل معنا ، (نوريا سفاريا) .",
+        "T_CONTACT_LONG": "Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum."
+    }
 }
