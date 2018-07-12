@@ -1,0 +1,24 @@
+{
+    "views": [
+        {
+            "title": "به سوئد خوش آمدید",
+            "description": " Välkommen till Sverige (به سوئد خوش آمدید) یک سری برنامه ای برای شمایی است که به تازگی وارد سوئد شده اید. در این برنامه میتوانید به اطلاعات مختلف درباره ی زندگی روزمره در اینجا و اکنون گوش بدهید. همچنین در مورد داستان های معروفی خواهید شنید که به شما امید و اعتماد به نفس خواهند داد.",
+            "image": "vts.png",
+            "shortName": "vts_far",
+            "language": "far"
+        }
+    ],
+    "translations": {
+        "T_HISTORY": "تاریخچه",
+        "T_HISTORY_SHORT": "",
+        "T_HISTORY_LONG": "",
+        "T_HISTORY_CLEAR": "پاک کردن تاریخچه",
+        "T_HISTORY_EMPTY": "",
+        "T_CONTACT_SHORT": "در اینجا میتوانید با ما در Välkommen till Sverige تماس بگیرید",
+        "T_CONTACT": "تماس با ما",
+        "T_NAME": "نام",
+        "T_EMAIL": "آدرس ایمیل (دلخواه)",
+        "T_MESSAGE": "پیام",
+        "T_SEND": "ارسال"
+    }
+}

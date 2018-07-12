@@ -11,11 +11,14 @@
     "translations": {
         "T_HISTORY": "سَجل",
         "T_HISTORY_SHORT": "آخر الملفات المشغلة",
-        "T_HISTORY_LONG": "آخر مئة ملف تم الأستماع لهم",
+        "T_HISTORY_LONG": "",
         "T_HISTORY_CLEAR": "مسح السجل",
         "T_HISTORY_EMPTY": "السجل فارغ",
         "T_CONTACT_SHORT": "",
         "T_CONTACT": "تواصل معنا ، (نوريا سفاريا) .",
-        "T_CONTACT_LONG": "Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum."
+        "T_NAME": "اسم",
+        "T_EMAIL": "الالكتروني",
+        "T_MESSAGE": "رسالة",
+        "T_SEND": "إرسال"
     }
 }

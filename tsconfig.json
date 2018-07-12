@@ -1,0 +1,9 @@
+{
+    "include": [
+        "./app/*.ts"
+    ],
+    "compilerOptions": {
+        "noImplicitAny": true,
+        "target": "es5"
+    }
+}

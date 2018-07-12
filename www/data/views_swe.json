@@ -2,7 +2,7 @@
     "views": [
         {
             "title": "Välkommen till Sverige",
-            "description": "Välkommen till Sverige är en programserie för dig som är ny i landet. Här kan du lyssna till handlar om vardagslivet här och nu. Du kommer också få höra välkända berättelser som ger hopp och framtidstro.",
+            "description": "Välkommen till Sverige är en programserie för dig som är ny i landet. Här kan du lyssna till sådant som handlar om vardagslivet här och nu. Du kommer också få höra välkända berättelser som ger hopp och framtidstro.",
             "image": "vts.png",
             "shortName": "vts_swe",
             "language": "swe"
@@ -11,11 +11,14 @@
     "translations": {
         "T_HISTORY": "Historik",
         "T_HISTORY_SHORT": "Senaste spelade avsnitt",
-        "T_HISTORY_LONG": "Här kan du se dina 100 senast spelade program från alla programserier.",
+        "T_HISTORY_LONG": "",
         "T_HISTORY_CLEAR": "Rensa historiken",
         "T_HISTORY_EMPTY": "Historiken är tom",
         "T_CONTACT": "Kontakta oss",
-        "T_CONTACT_SHORT": "Här kan du kontakta oss på Norea radio",
-        "T_CONTACT_LONG": "Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum."
+        "T_CONTACT_SHORT": "Här kan du kontakta oss på Välkommen till Sverige",
+        "T_NAME": "Namn (valfritt)",
+        "T_EMAIL": "E-post (valfritt)",
+        "T_MESSAGE": "Meddelande",
+        "T_SEND": "Skicka"
     }
 }

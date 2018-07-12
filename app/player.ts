@@ -1,5 +1,9 @@
+import { getHistory, storeHistory } from './history'
+export let isPlaying = false;
+let footerHeight = 64;   // default footer height (different on larger screens)
+
 /* puts a track in the player and plays it */
-function playTrack(nr, title, url) {
+export function playTrack(nr, title, url) {
 	resetPlayer();
 	if (typeof device != "undefined" && navigator.network.connection.type == Connection.NONE) {
 		showError("Uppkoppling saknas");
@@ -12,9 +16,18 @@ function playTrack(nr, title, url) {
 		document.getElementById("programinfo").innerHTML = title;
 		var trackObj = { "nr": nr, "title": title, "url": url };
 		storeHistory(trackObj);
-		if (isPage == "history") {
-			loadHistory();
-		}
+	}
+}
+
+/* generates time in minutes and seconds */
+function ms(seconds: number) {
+	if (isNaN(seconds)) {
+		return '00:00';
+	}
+	else {
+		var m = Math.floor(seconds / 60);
+		var s = Math.floor(seconds % 60);
+		return ((m < 10 ? '0' : '') + m + ':' + (s < 10 ? '0' : '') + s);
 	}
 }
 
@@ -37,8 +50,8 @@ function updateProgress() {
 }
 
 /* toggles play and pause */
-function playPause() {
-	player = document.getElementById("player");
+export function playPause() {
+	var player = document.getElementById("player");
 	if (player.paused) {
 		player.play();
 		showPauseButton();
@@ -48,6 +61,8 @@ function playPause() {
 		showPlayButton();
 	}
 }
+
+window['playPause'] = playPause
 
 /* shows pause button */
 function showPauseButton() {
@@ -78,8 +93,11 @@ function closeFooter() {
 	document.getElementById("content").style["margin-bottom"] = "0px"; // removes extra margin at the bottom
 	document.getElementById("footer").style["display"] = "none";       // hides footer
 	document.getElementById("playerBox").innerHTML = '';               // removes audio tag from content
-	document.getElementById("language-footer").style.display = 'flex';
+	document.getElementById("language-footer").style.display = '';
+	document.getElementById("language-footer").style.display = '';
 }
+
+window['closeFooter'] = closeFooter
 
 /* shows the error message */
 function showError(text) {
@@ -102,27 +120,6 @@ function moveTimeTo(mouseX) {
 	var percent = mouseX / width;
 	var player = document.getElementById("player");
 	player.currentTime = player.duration * percent;
-}
-
-/* stores history in local storage */
-function storeHistory(track) {
-	var history = getHistory();
-	if (history != "") {
-		if (history.length > 99) {
-			history.shift();
-		}
-		history.push(track);
-	}
-	else {
-		history = [track];
-	}
-	window.localStorage.setItem('history', JSON.stringify(history));
-}
-
-/* deletes history tracks from local storage */
-function clearHistory() {
-	window.localStorage.removeItem('history');
-	loadHistory(); // updates history page
 }
 
 /* adds listeners for click and drag to the scrubber bar */
@@ -185,4 +182,17 @@ function addPlaybackListener() {
 	}, false);
 
 	player.addEventListener("ended", onEnded); // when track ends
+}
+
+/* gets called when a track ends */
+function onEnded() {
+	closeFooter();
+	isPlaying = false;
+}
+
+export function setUp() {
+	/* calculates the footerHeight variable so that it can be used later */
+		var footerStyle = window.getComputedStyle(document.getElementById('footer'));
+		let footerHeight = parseInt(footerStyle.getPropertyValue('height'));
+		addScrubberListener();     
 }

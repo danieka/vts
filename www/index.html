@@ -6,7 +6,6 @@
     <meta name="msapplication-tap-highlight" content="no" />
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
     <link rel="stylesheet" type="text/css" href="./css/index.css" />
-		<link rel="stylesheet" media="(min-width: 620px)" href="./css/index-2x.css" />
     <title>Norea</title>
 	</head>
 	<body>
@@ -38,12 +37,12 @@
 		<div id="language-selector">
 			<img src="img/vts_header.png">
 			<button onclick="selectLanguage('swe')">Svenska</button>
-			<button onclick="selectLanguage('ara')">Arabiska</button>
+			<button onclick="selectLanguage('ara')">عربى</button>
+			<button onclick="selectLanguage('far')">فارسی</button>
 		</div>
 		<div id="error"><p id="errorText"></p><a class="close" onclick="closeError();">Close Error</a></div>
-		<script src="js/player.js"></script>
-		<script src="js/generate.js"></script>
-		<script src="js/index.js"></script>
+		<script src="js/dist/polyfill.min.js"></script>
+		<script src="js/dist/compiled.js"></script>
 		<script src="cordova.js"></script>
 	</body>
 </html>
